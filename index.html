@@ -9,8 +9,29 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <input autofocus name="char" id="char" type="text">
+    <div id="app">
+        <div id="enter">
+            <div id="charInput">
+                <label for="password">Enter the password</label>
+                <input autofocus name="password" id="password" type="text">
+                <button>Ok</button>
+            </div>
+            <div id="settings">
+                <label for="autoClear">Auto clear</label>
+                <input checked id="autoClear" name="autoClear" type="checkbox">
+                <label for="autoValid">Auto validate</label>
+                <input checked id="autoValid" name="autoValid" type="checkbox">
+                <label for="numberOfTests">Number of tests</label>
+                <input value="10" id="numberOfTests" name="numberOfTests" type="number">
+            </div>
+        </div>
+        <div id="test">
+            <div id="charTrace">
+                <span class="trace good">This is a good password</span>
+                <span class="trace bad">Je me prélasse sur l'oreiller</span>
+            </div>
+            <input name="passTest" id="passTest" type="text">
+        </div>
     </div>
 </body>
 </html>

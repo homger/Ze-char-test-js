@@ -1,10 +1,86 @@
-html,body{
-    height: 100%;
-    
+html, body {
+  height: 100%;
 }
-body{
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+#app {
+  position: relative;
+  display: block;
+  width: 80%;
+  height: 80%;
+}
+#app > div {
+  position: absolute;
+  background-color: bisque;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 50%;
+  transition-property: width, height;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+  flex-direction: column;
+}
+#app #test {
+  width: 20%;
+  height: 20%;
+}
+#app #enter {
+  width: 80%;
+  height: 80%;
+}
+
+#app.testmode #enter {
+  width: 20%;
+  height: 20%;
+}
+#app.testmode #test {
+  width: 80%;
+  height: 80%;
+}
+
+#enter {
+  top: 0;
+  left: 0;
+}
+#enter #charInput {
+  margin-bottom: 5%;
+}
+#test {
+  flex-direction: column;
+  bottom: 0;
+  right: 0;
+}
+
+.trace.good {
+  background-color: rgba(198, 238, 252, 0.945);
+}
+
+.trace.bad {
+  background-color: #f8bcbc;
+}
+
+#charTrace {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 100%;
+}
+#charTrace span {
+  display: inline-block;
+  padding: 2px;
+  width: 95%;
+  text-align: center;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=style.css.map */
